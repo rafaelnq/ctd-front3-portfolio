@@ -54,7 +54,7 @@ function Footer() {
       <p>© Rafael Nobre</p>
       <SocialLinks>
         {socialLinks.map(socialLink => (
-          <a key={socialLink.id} href={socialLink.href} target="_blank">
+          <a key={socialLink.id} href={socialLink.href} target="_blank" rel="noreferrer">
             {socialLink.icon}
           </a>
         ))}
