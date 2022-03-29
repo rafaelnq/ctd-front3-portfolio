@@ -41,7 +41,7 @@ const Description = styled.p`
 function Project({imageUrl, title, description, url, reverse}) {
   return (
     <Wrapper reverse={reverse}>
-      <a href={url} target="_blank">
+      <a href={url} target="_blank" rel="noreferrer">
         <Image src={imageUrl} alt={title} />
         <div>
           <Title>{title}</Title>
