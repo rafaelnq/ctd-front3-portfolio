@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { atSmall } from '../styles/breakpoints'
 
 const Wrapper = styled.li`
   a {
@@ -12,6 +13,11 @@ const Wrapper = styled.li`
     
     &:hover {
       opacity: 0.8;
+    }
+
+    ${atSmall} {
+      flex-direction: column;
+      gap: 8px;
     }
   }
 `

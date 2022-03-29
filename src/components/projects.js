@@ -1,9 +1,17 @@
 import styled from 'styled-components'
+import {atSmall} from '../styles/breakpoints'
 import {useProjects} from '../hooks/use-projects'
 import {Project} from './project'
 
 const Wrapper = styled.section`
   padding-block: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  ${atSmall} {
+    align-items: center;
+  }
 `
 
 const Title = styled.h2`
@@ -15,6 +23,10 @@ const Title = styled.h2`
   padding-bottom: 16px;
   margin-bottom: 90px;
   border-bottom: 3px solid #ffffff;
+
+  ${atSmall} {
+    margin-bottom: 32px;
+  }
 `
 
 const ProjectList = styled.ul`

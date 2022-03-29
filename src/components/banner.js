@@ -1,12 +1,20 @@
 import styled from 'styled-components'
+import {atSmall} from '../styles/breakpoints'
 import avatarImage from '../assets/images/avatar.gif'
-import { Button } from './button'
+import {Button} from './button'
 
 const Wrapper = styled.section`
   padding-top: 65px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  
+  ${atSmall} {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-bottom: 80px;
+  }
 
   button {
     margin-top: 32px;
@@ -23,6 +31,7 @@ const Title = styled.p`
 const Paragraph = styled.p`
   font-size: 18px;
   max-width: 780px;
+
   & + & {
     margin-top: 16px;
   }
@@ -34,6 +43,11 @@ const Avatar = styled.img`
   height: 264px;
   object-fit: cover;
   border-radius: 50%;
+
+  ${atSmall} {
+    order: -1;
+    margin-bottom: 32px;
+  }
 `
 
 function Banner() {
@@ -62,9 +76,7 @@ function Banner() {
         </Paragraph>
         <Button onClick={scrollToContact}>Entrar em contato</Button>
       </div>
-      <div>
-        <Avatar src={avatarImage} alt="Avatar" />
-      </div>
+      <Avatar src={avatarImage} alt="Avatar" />
     </Wrapper>
   )
 }

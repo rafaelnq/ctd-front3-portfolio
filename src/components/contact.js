@@ -1,5 +1,6 @@
 import styled from 'styled-components'
-import { Button } from './button'
+import {atSmall} from '../styles/breakpoints'
+import {Button} from './button'
 
 const Wrapper = styled.section`
   padding-block: 64px;
@@ -14,6 +15,10 @@ const Title = styled.h2`
   padding-bottom: 16px;
   margin-bottom: 90px;
   border-bottom: 3px solid #ffffff;
+
+  ${atSmall} {
+    margin-bottom: 32px;
+  }
 `
 
 const ContactForm = styled.form`
@@ -47,9 +52,7 @@ const ContactForm = styled.form`
   }
 `
 
-
 function Contact() {
-
   return (
     <Wrapper id="contact">
       <Title>Contato.</Title>

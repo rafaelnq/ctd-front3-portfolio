@@ -1,0 +1,1 @@
+export const atSmall = `@media (max-width: 768px)`
